@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.tron.api.GrpcAPI;
 import org.tron.api.GrpcAPI.AccountList;
 import org.tron.api.GrpcAPI.AssetIssueList;
+import org.tron.api.GrpcAPI.BytesMessage;
 import org.tron.api.GrpcAPI.EmptyMessage;
 import org.tron.api.GrpcAPI.NumberMessage;
 import org.tron.api.GrpcAPI.WitnessList;
@@ -130,13 +131,8 @@ public class GrpcClient {
 
   public AssetIssueContract getAssetIssueByName(String assetName) {
     ByteString assetNameBs = ByteString.copyFrom(assetName.getBytes());
-    Account request = Account.newBuilder().setAddress(addressBS).build();
-    AssetIssueList assetIssueList = blockingStub
-        .getAssetIssueByAccount(request);
-    if (assetIssueList != null) {
-      return Optional.of(assetIssueList);
-    }
-    return Optional.empty();
+    BytesMessage request = BytesMessage.newBuilder().setValue(assetNameBs).build();
+    return blockingStub.getAssetIssueByName(request);
   }
 
 }
