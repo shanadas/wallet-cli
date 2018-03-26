@@ -30,13 +30,13 @@ function getContractListFromTransaction(transaction) {
   var raw = transaction.getRawData();
   var type = raw.getType();
   if (type != 1) {
-    layer.alert("Invalid transaction type !!!!" + type);
+    alert("Invalid transaction type !!!!" + type);
     return null;
   }
   var contractList = raw.getContractList();
   var count = contractList.length;
   if (count == 0) {
-    layer.alert("No contract !!!!");
+    alert("No contract !!!!");
     return null;
   }
 

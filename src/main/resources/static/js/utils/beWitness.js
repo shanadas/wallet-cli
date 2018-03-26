@@ -25,9 +25,9 @@ $(document).ready(function(){
 
     $('#tobeWitness').on('click',function () {
         if(!$(".c_check input").is(":checked")){
-            layer.alert('请阅读出块人通知，并勾选')
+            alert('请阅读出块人通知，并勾选')
         }else if($('.ord_input').val() == ''){
-            layer.alert('请输入您的个人站点')
+            alert('请输入您的个人站点')
         }else{
             createWitnessView()
         }
@@ -60,11 +60,11 @@ $(document).ready(function(){
      //验签成功
      function TransBroadSuccessCallback(data) {
             if(data){
-                layer.alert('申请成功');
+                alert('申请成功');
                 $('#tobeWitness').css('display','none')
                 $('.ord_suc').css('display','block')
             }else{
-                layer.alert('申请失败');
+                alert('申请失败');
             }
 
 

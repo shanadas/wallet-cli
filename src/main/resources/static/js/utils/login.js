@@ -59,9 +59,9 @@ function copyUrl2 (repeat) {
         selection.removeAllRanges();
         selection.addRange(range);
     } else {
-        layer.alert("none");
+        alert("none");
     }
-    document.execCommand('Copy','false',null);
+    document.execCommand('Copy');
 }
 $('#submit').on('click',function () {
     priKeyBytes = genPriKey();
@@ -159,10 +159,10 @@ $('#creatAccount').on('click',function () {
             $('#text').load('/html/message.html');
             window.localStorage.setItem('key',pk)
         }else{
-            layer.alert('请您认真阅读并勾选创建账户须知')
+            alert('请您认真阅读并勾选创建账户须知')
         }
     }else{
-        layer.alert('请生成账户地址和密码')
+        alert('请生成账户地址和密码')
     }
 })
 

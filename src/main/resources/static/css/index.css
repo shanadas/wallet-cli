@@ -29,9 +29,9 @@ body ,html{
     display: inline-block;
     width: 45%;
 }
-#addcount p span:nth-of-type(2){
-    width: 30%;
-}
+/*#addcount p span:nth-of-type(2){*/
+    /*width: 30%;*/
+/*}*/
 #addcount p span input{
 border: 1px solid #ccc;
     border-radius: 2px;

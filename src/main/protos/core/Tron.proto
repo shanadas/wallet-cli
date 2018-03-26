@@ -1,7 +1,6 @@
 syntax = "proto3";
 
 import "google/protobuf/any.proto";
-import "core/Discover.proto";
 
 package protocol;
 
@@ -196,7 +195,7 @@ enum ReasonCode {
   LOCAL_IDENTITY = 10;
   PING_TIMEOUT = 11;
   USER_REASON = 12;
-  UNKNOWN = 255;
+  UNKNOWN = 13;
 }
 
 message DisconnectMessage {
@@ -204,6 +203,8 @@ message DisconnectMessage {
 }
 
 message HelloMessage {
-  Endpoint from = 1;
-  int32 version = 2;
+  int32 p2pVersion = 1;
+  string clientId = 2;
+  int32 listenPort = 4;
+  string peerId = 5;
 }

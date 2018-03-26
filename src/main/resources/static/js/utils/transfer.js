@@ -48,10 +48,10 @@ $('#change').off('click').on('click', function () {
   com_priKeyBytes = base64DecodeFromString(com_prik);
   com_addressBytes = getAddressFromPriKey(com_priKeyBytes);
   com_text = byteArray2hexStr(com_addressBytes);
-  // layer.alert("com_priKeyBytes:" + com_priKeyBytes);
-  // layer.alert("com_text:" + com_text);
-  // layer.alert("go_text:" + go_text);
-  // layer.alert("num_text:" + num_text);
+  // alert("com_priKeyBytes:" + com_priKeyBytes);
+  // alert("com_text:" + com_text);
+  // alert("go_text:" + go_text);
+  // alert("num_text:" + num_text);
   var data = {
     "Address": com_text,
     "toAddress": go_text,
@@ -61,7 +61,7 @@ $('#change').off('click').on('click', function () {
 })
 
 TransSuccessCallback = function (data) {
-  //layer.alert("data:" + data);
+  //alert("data:" + data);
   var transaction = getTransActionFromBase64String(data);
   var transactionSigned = signTransaction(com_priKeyBytes, transaction);
   var transactionBytes = transactionSigned.serializeBinary();
@@ -70,17 +70,17 @@ TransSuccessCallback = function (data) {
       TransBroadFailureCallback)
 };
 TransBroadSuccessCallback = function (success) {
-  layer.alert("转账成功");
+  alert("转账成功");
   console.log('转账成功')
 
 };
 TransFailureCallback = function (err) {
-  layer.alert("转账失败，生成交易失败");
+  alert("转账失败，生成交易失败");
 
   console.log('转账失败，生成交易失败')
 };
 TransBroadFailureCallback = function (err) {
-  layer.alert("转账失败，签名失败");
+  alert("转账失败，签名失败");
 
   console.log('转账失败，签名失败')
 };

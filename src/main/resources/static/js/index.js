@@ -22,17 +22,17 @@ $(document).ready(function(){
     $("#a_witness").click(function(){
         $('#text').css('background','none');
         $(this).addClass('header_active').siblings().removeClass('header_active');
-        $('#text').load('/html/witness.html');
+        $('#text').load('html/witness.html');
     });
     $('#acco').click(function () {
         $('#text').css('background','none');
         $(this).addClass('header_active').siblings().removeClass('header_active');
-        $('#text').load('/html/accountQuery.html');
+        $('#text').load('html/accountQuery.html');
     });
     $('.j_left').click(function () {
         $('#text').css('background','none');
         $(this).addClass('header_active').siblings().removeClass('header_active');
-        $('#text').load('/html/message.html');
+        $('#text').load('html/message.html');
     });
     //退出
     $('#center').click(function () {
@@ -42,22 +42,22 @@ $(document).ready(function(){
         $('#header_login').css('display','none');
         $('#center').css('display','none');
         $('.header span').removeClass('header_active');
-        $('#text').css('background','url(/../static/img/bg.png)')
-        $('#text').load('/html/login.html');
+        $('#text').css('background','url(/img/bg.png)')
+        $('#text').load('html/login.html');
     });
     $('#money').click(function () {
         $(this).addClass('header_active').siblings().removeClass('header_active');
         $('#text').css('background','url(/img/bg.png)')
-        $('#text').load('/html/transform.html');
+        $('#text').load('html/transform.html');
         // if(window.localStorage.getItem('key')){
-        //     $('#text').load('/html/transform.html');
+        //     $('#text').load('html/transform.html');
         // }else{
-        //     $('#text').load('/html/login.html');
+        //     $('#text').load('html/login.html');
         // }
 
     });
     $('#create').click(function () {
-        $('#text').load('/html/login.html');
+        $('#text').load('html/login.html');
         $('.header span').removeClass('header_active');
         $('#text').css('background','url(/img/bg.png)')
     });
@@ -65,14 +65,14 @@ $(document).ready(function(){
     //资产发行
     $('#nemoney').click(function () {
         $(this).addClass('header_active').siblings().removeClass('header_active');
-        $('#text').load('/html/count.html');
+        $('#text').load('html/count.html');
         $('#text').css('background','none');
         // if(window.localStorage.getItem('key')){
         //     $('#text').css('background','none');
-        //     $('#text').load('/html/count.html');
+        //     $('#text').load('html/count.html');
         // }else{
-        //     $('#text').load('/html/login.html');
-        //     $('#text').css('background','url(/../static/img/bg.png)')
+        //     $('#text').load('html/login.html');
+        //     $('#text').css('background','url(/img/bg.png)')
         // }
 
     });
@@ -97,7 +97,8 @@ $(document).ready(function(){
     //     console.log('err')
     // };
 
-});
+
+})
 
 
 //

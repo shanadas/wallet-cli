@@ -28,7 +28,7 @@ function QueryWitnessSuccess(data) {
                 +'<td><span class="num">'+(i+1)+'</span></td>'
                 +'<td>'+address+'</td>'
                 +'<td>'+votecount+'</td>'
-                +'<td><input class="vote_act" type="text" placeholder="请输入您的投票数" /></td>'
+                +'<td><input class="vote_act" type="number" placeholder="请输入您的投票数" /></td>'
                 +'</tr>';
         }
     }else{
@@ -82,9 +82,9 @@ voteSubmitSuccessCallback = function (data) {
 }
 
 voteSuccessCallback = function (data) {
-    layer.alert("投票成功");
+    alert("投票成功");
 }
 
 voteFailureCallback = function (data) {
-    layer.alert("投票失败");
+    alert("投票失败");
 }

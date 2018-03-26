@@ -46,17 +46,17 @@ function calPriceByTrx() {
     }
 }
 
-function checkFunction() {trxNumCheck
-    $('#assetInfoCheck').text($('#amount').val()+ ' ' +$('#assetName').text());
+function checkFunction() {
+    $('#trxNumCheck').text($('#amount').val()+ '');
     var assetNum = $('#price').text() * $('#amount').val();
-    var info = assetNum;
-    $('#trxNumCheck').text(info);
+    var info = $('#assetName').text() +' '+ assetNum;
+    $('#assetInfoCheck').text(info);
 }
 
 function submitParticipateAssetIssue() {
     var isChecked = $('#checkParticipate').prop('checked');
     if(!isChecked){
-        layer.alert("请确认参与资产发行");
+        alert("请确认参与资产发行");
         return;
     }
     var name = byteArray2hexStr(stringToBytes($('#assetName').text()));
@@ -78,17 +78,17 @@ submitParticipateAssetIssueSuccessCallback = function (data) {
 
 submitAssetIssueSuccessCallback = function (data) {
     if(data) {
-        layer.alert("参与成功");
+        alert("参与成功");
         $('#text').css('background','none');
         $('.header span').removeClass('header_active');
         $('#text').load('/html/control.html');
     }else{
-        layer.alert("参与失败");
+        alert("参与失败");
     }
 }
 
 submitAssetIssueFailureCallback = function (data) {
-    layer.alert("参与失败");
+    alert("参与失败");
 }
 
 
@@ -116,7 +116,7 @@ getAssetListSuccessCallback = function (data) {
 }
 
 getAssetListFailureCallback = function (data) {
-    layer.alert("获取资产列表失败");
+    alert("获取资产列表失败");
 }
 
 
@@ -141,17 +141,17 @@ createAssetSuccessCallback = function (data) {
 
 signSuccessCallback = function (data) {
     if(data) {
-        layer.alert("发行资产成功");
+        alert("发行资产成功");
         $('#text').css('background','none');
         $('.header span').removeClass('header_active');
         $('#text').load('/html/control.html');
     }else{
-        layer.alert("发行资产失败");
+        alert("发行资产失败");
     }
 }
 
 createAssetFailureCallback = function (data) {
-    layer.alert("发行资产失败");
+    alert("发行资产失败");
 }
 
 function getAssetIssueListFun(){
