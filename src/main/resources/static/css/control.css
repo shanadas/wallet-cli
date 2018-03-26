@@ -60,7 +60,7 @@
     line-height: 40px;
     text-align: left;
     cursor: pointer;
-    padding-left: 80px;
+    padding-left: 29%;
 }
 .c_form  li img{
     vertical-align: middle;
@@ -371,7 +371,9 @@ set
     border-left: 1px solid #d4d8da;
 }
 
-
+.name_warn ,.pri_warn{
+    display: none;
+}
 
 
 

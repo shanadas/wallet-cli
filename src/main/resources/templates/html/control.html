@@ -4,23 +4,23 @@
         <li class="c_active" id="accountInfo">账户详情</li>
         <!--<li>近期活动</li>-->
         <i></i>
-        <li>申请成为出块人</li>
+        <li>申请成为活跃超级代表人</li>
         <li onclick="voteInit()">投票</li>
-        <i></i>
+        <!--<i></i>-->
         <!--<li>设置</li>-->
-       <li>帮助</li>
+       <!--<li>帮助</li>-->
 </ul>
 
 <div class="c_table">
     <div class="d_active">
         <div class="count_outer">
             <div class="price">
-                <h6>资产列表</h6>
-                <input type="button" class="liner_granet" value="资产转账" id="transfer_accounts">
+                <h6>通证列表</h6>
+                <input type="button" class="liner_granet" value="通证转账" id="transfer_accounts">
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>资产名称</th>
+                        <th>通证名称</th>
                         <th>我的总量</th>
                     </tr>
                     </thead>
@@ -77,19 +77,18 @@
     <!--</div>-->
     <div>
         <span class="order">
-            <h6>出块人通知</h6>
-            <p>出块人</p>
+            <h6>活跃超级代表通知</h6>
+            <p>活跃超级代表人</p>
             <p>
-                申请成为出块者需要您的账户TRX余额>0，点击申请按钮，输入您的账户密码，即可申请成为出块候选者。通过用户投票，得票最多的几个人，会成为出块者。成为出块者可以打包交易，生成区块并获取对应的TRX奖励。
-            </p>
+                申请成为超级代表需要您的账户TRX余额>0，点击申请按钮，输入您的账户密码，即可申请成为候选超级代表。通过用户投票，得票最多的几个人，会成为超级代表。成为超级代表可以打包交易，生成区块并获取对应的TRX奖励。            </p>
             <p class="c_check">
                  <input type="text" class="ord_input" id="ordInputUrl" placeholder="请输入您的个人站点">
-                <input type="checkbox"> <span >我已理解出块人注意事项，确认申请出块人候选人</span>
+                <input type="checkbox"> <span >我已理解超级代表注意事项，确认申请候选超级代表。</span>
             </p>
         </span>
 
-        <button class="ord_btn disable_btn" id="tobeWitness">申请成为出块人候选人</button>
-        <button class="ord_suc">您已申请成为出块人</button>
+        <button class="ord_btn disable_btn" id="tobeWitness">申请成为候选超级代表</button>
+        <button class="ord_suc">您已申请成为候选超级代表</button>
 
 
     </div>
@@ -146,77 +145,77 @@
             <!--<p>一段时间不活动后，您的账户将自动注销</p>-->
         <!--</span>-->
     <!--</div>-->
-    <div class="help">
-       <div>
-           <p class="help_list">
-               <i class="ques">Q</i>
-               <span class="title">TRON区块链浏览器有哪些功能?</span>
-               <img src="/img/listbot.png" alt="" class="h_list">
-               <img src="/img/right.png" alt="" class="none">
-           </p>
-           <p class="help_detail">
-               <i class="ans">A</i>
-               <span class="">目前TRON区块链浏览器包括账户管理功能和5大版块：区块信息、账户查询、出块人、钱包、资产发行。</span>
-           </p>
-       </div>
-        <div>
-            <p class="help_list">
-                <i class="ques">Q</i>
-                <span class="title">如何注册TRON区块链浏览器账户?</span>
-                <img src="/img/listbot.png" alt="" class="h_list">
-                <img src="/img/right.png" alt="" class="none">
-            </p>
-            <p class="help_detail">
-                <i class="ans">A</i>
-                <span class=" more">TRON区块链浏览器钱包和资产发行功能，需要用户登录账户进行操作。未登录用户需通过账户管理功能，注册TRON账户，将注册密码保存在本地（切记不可泄漏公开），通过密码即可进行登录操作。</span>
-            </p>
-        </div>
-        <div>
-            <p class="help_list">
-                <i class="ques">Q</i>
-                <span class="title">如何用TRON区块链浏览器发行资产或参与资产发行?</span>
-                <img src="/img/listbot.png" alt="" class="h_list">
-                <img src="/img/right.png" alt="" class="none">
-            </p>
-            <p class="help_detail">
-                <i class="ans">A</i>
-                <span class=" more">
-                    TRON区块链浏览器支持用户一键发行资产和参与资产发行。
-                  <br>  【1】发行资产
-                 <br>   点击上部导航栏中资产发行，切换到资产发行页。输入您要发行的数字资产信息，一键就可以发行数字资产。每次资产发行需要消耗发行账户100,000 TRX。
-                 <br>   【2】参与资产发行
-                 <br>   通过查看全部资产列表，可以参与到发行当中。
+    <!--<div class="help">-->
+       <!--<div>-->
+           <!--<p class="help_list">-->
+               <!--<i class="ques">Q</i>-->
+               <!--<span class="title">TRON区块链浏览器有哪些功能?</span>-->
+               <!--<img src="/img/listbot.png" alt="" class="h_list">-->
+               <!--<img src="/img/right.png" alt="" class="none">-->
+           <!--</p>-->
+           <!--<p class="help_detail">-->
+               <!--<i class="ans">A</i>-->
+               <!--<span class="">目前TRON区块链浏览器包括账户管理功能和5大版块：区块信息、账户查询、出块人、钱包、资产发行。</span>-->
+           <!--</p>-->
+       <!--</div>-->
+        <!--<div>-->
+            <!--<p class="help_list">-->
+                <!--<i class="ques">Q</i>-->
+                <!--<span class="title">如何注册TRON区块链浏览器账户?</span>-->
+                <!--<img src="/img/listbot.png" alt="" class="h_list">-->
+                <!--<img src="/img/right.png" alt="" class="none">-->
+            <!--</p>-->
+            <!--<p class="help_detail">-->
+                <!--<i class="ans">A</i>-->
+                <!--<span class=" more">TRON区块链浏览器钱包和资产发行功能，需要用户登录账户进行操作。未登录用户需通过账户管理功能，注册TRON账户，将注册密码保存在本地（切记不可泄漏公开），通过密码即可进行登录操作。</span>-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<p class="help_list">-->
+                <!--<i class="ques">Q</i>-->
+                <!--<span class="title">如何用TRON区块链浏览器发行资产或参与资产发行?</span>-->
+                <!--<img src="/img/listbot.png" alt="" class="h_list">-->
+                <!--<img src="/img/right.png" alt="" class="none">-->
+            <!--</p>-->
+            <!--<p class="help_detail">-->
+                <!--<i class="ans">A</i>-->
+                <!--<span class=" more">-->
+                    <!--TRON区块链浏览器支持用户一键发行资产和参与资产发行。-->
+                  <!--<br>  【1】发行资产-->
+                 <!--<br>   点击上部导航栏中资产发行，切换到资产发行页。输入您要发行的数字资产信息，一键就可以发行数字资产。每次资产发行需要消耗发行账户100,000 TRX。-->
+                 <!--<br>   【2】参与资产发行-->
+                 <!--<br>   通过查看全部资产列表，可以参与到发行当中。-->
 
-                </span>
-            </p>
-        </div>
-        <div>
-            <p class="help_list">
-                <i class="ques">Q</i>
-                <span class="title">如何使用TRON钱包进行资产交易？</span>
-                <img src="/img/listbot.png" alt="" class="h_list">
-                <img src="/img/right.png" alt="" class="none">
-            </p>
-            <p class="help_detail">
-                <i class="ans">A</i>
-                <span class="">TRON钱包支持用户进行资产交易，通过转账操作，向对方账户转出资产。</span>
-            </p>
-        </div>
-        <div>
-            <p class="help_list">
-                <i class="ques">Q</i>
-                <span class="title">如何成为TRON主链见证人？</span>
-                <img src="/img/listbot.png" alt="" class="h_list">
-                <img src="/img/right.png" alt="" class="none">
-            </p>
-            <p class="help_detail">
-                <i class="ans">A</i>
-                <span class=" more">只要当前账户拥有TRX，即可在账户管理功能中申请成为出块人。同时可以对当前出块候选人进行投票，每个账户可以多次投票，每次最大投票数小于等于TRX数（拥有N个TRX，就能投小于等于N票），可以投给多个出块人。1天（00:00～24:00）为一个投票周期，每个周期以最终一次投票数据计算得票结果，得票最多的几个人，会成为出块人。
+                <!--</span>-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<p class="help_list">-->
+                <!--<i class="ques">Q</i>-->
+                <!--<span class="title">如何使用TRON钱包进行资产交易？</span>-->
+                <!--<img src="/img/listbot.png" alt="" class="h_list">-->
+                <!--<img src="/img/right.png" alt="" class="none">-->
+            <!--</p>-->
+            <!--<p class="help_detail">-->
+                <!--<i class="ans">A</i>-->
+                <!--<span class="">TRON钱包支持用户进行资产交易，通过转账操作，向对方账户转出资产。</span>-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<p class="help_list">-->
+                <!--<i class="ques">Q</i>-->
+                <!--<span class="title">如何成为TRON主链见证人？</span>-->
+                <!--<img src="/img/listbot.png" alt="" class="h_list">-->
+                <!--<img src="/img/right.png" alt="" class="none">-->
+            <!--</p>-->
+            <!--<p class="help_detail">-->
+                <!--<i class="ans">A</i>-->
+                <!--<span class=" more">只要当前账户拥有TRX，即可在账户管理功能中申请成为出块人。同时可以对当前出块候选人进行投票，每个账户可以多次投票，每次最大投票数小于等于TRX数（拥有N个TRX，就能投小于等于N票），可以投给多个出块人。1天（00:00～24:00）为一个投票周期，每个周期以最终一次投票数据计算得票结果，得票最多的几个人，会成为出块人。-->
 
-申请成为出块人以及投票操作均不消耗TRX。</span>
-        </div>
+<!--申请成为出块人以及投票操作均不消耗TRX。</span>-->
+        <!--</div>-->
 
-    </div>
+    <!--</div>-->
 </div>
 <script type="text/javascript">
 $('.help_list').each(function (i,item) {

@@ -46,14 +46,23 @@ TransSuccessCallback = function (data) {
   function getTx(contractName,ownerHex,amount,toHex) {
     str += '<li class="transfer">'
         + '<button >'+contractName+'</button>'
-        + '<span class="tran_name">' + ownerHex + '</span>'
+        + '<span class="tran_name com_tran">' + ownerHex + '</span>'
         + '<span>将' + amount + ' TRX转帐给</span>'
-        + '<span class="tran_name">' + toHex + '</span>'
+        + '<span class="tran_name go_tran">' + toHex + '</span>'
         // + '<span>' + time + '秒钟前</span>'
         + '</li>';
 
     $("#recentHtml").html(str);
-
+      $(".com_tran").hover(function(){
+          this.title =parenthashHex;
+      },function(){
+          this.title = '';
+      });
+      $(".go_tran").hover(function(){
+          this.title =parenthashHex;
+      },function(){
+          this.title = '';
+      });
   }
 
 
@@ -134,6 +143,11 @@ TransSuccessCallback = function (data) {
   for(var i= 1;i<7;i++){
     getBeforeBlockByNumToView(getBlockByNumToView,blockNumber,i,TransSuccessByNumToViewCallback,TransFailureCallback)
   }
+    $("#beforeBlock").hover(function(){
+        this.title =parenthashHex;
+    },function(){
+        this.title = '';
+    });
 };
 
 
@@ -206,10 +220,16 @@ TransSuccessByNumToViewCallback = function (data) {
       + '<p>'+timeStr+'前</p>'
       + ' </div>'
       + '<div class="mr_right">'
-      + '<p>出块人: '+witnessAddressHexSix+'  </p><p>'
+      + '<p class="chunk">活跃超级代表人数: '+witnessAddressHexSix+'  </p><p>'
       + '<span>交易数：'+transactionNum+'</span>'
       +'<span>大小：'+big+'bytes</span></p></div></div>';
       $("#recentBlock").append(html);
+
+        $(".chunk").hover(function(){
+            this.title =witnessAddressHex;
+        },function(){
+            this.title = '';
+        });
 };
 
 TransFailureCallback = function (err) {

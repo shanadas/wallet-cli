@@ -61,7 +61,7 @@ function copyUrl2 (repeat) {
     } else {
         alert("none");
     }
-    document.execCommand('Copy','false',null);
+    document.execCommand('Copy');
 }
 $('#submit').on('click',function () {
     priKeyBytes = genPriKey();
