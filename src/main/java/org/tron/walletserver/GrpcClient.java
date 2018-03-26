@@ -15,6 +15,7 @@ import org.tron.api.GrpcAPI.NumberMessage;
 import org.tron.api.GrpcAPI.WitnessList;
 import org.tron.api.WalletGrpc;
 import org.tron.protos.Contract;
+import org.tron.protos.Contract.AssetIssueContract;
 import org.tron.protos.Protocol.Account;
 import org.tron.protos.Protocol.Block;
 import org.tron.protos.Protocol.Transaction;
@@ -119,6 +120,17 @@ public class GrpcClient {
   public Optional<AssetIssueList> getAssetIssueByAccount(byte[] address) {
     ByteString addressBS = ByteString.copyFrom(address);
     Account request = Account.newBuilder().setAddress(addressBS).build();
+    AssetIssueList assetIssueList = blockingStub
+        .getAssetIssueByAccount(request);
+    if (assetIssueList != null) {
+      return Optional.of(assetIssueList);
+    }
+    return Optional.empty();
+  }
+
+  public AssetIssueContract getAssetIssueByName(String assetName) {
+    ByteString assetNameBs = ByteString.copyFrom(assetName.getBytes());
+    ByteMess request = Account.newBuilder().setAddress(addressBS).build();
     AssetIssueList assetIssueList = blockingStub
         .getAssetIssueByAccount(request);
     if (assetIssueList != null) {

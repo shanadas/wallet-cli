@@ -18,6 +18,7 @@ import org.tron.common.utils.TransactionUtils;
 import org.tron.common.utils.Utils;
 import org.tron.core.config.Configuration;
 import org.tron.protos.Contract;
+import org.tron.protos.Contract.AssetIssueContract;
 import org.tron.protos.Protocol.Account;
 import org.tron.protos.Protocol.AccountType;
 import org.tron.protos.Protocol.Block;
@@ -519,5 +520,7 @@ public class WalletClient {
   public static Optional<AssetIssueList> getAssetIssueByAccount(byte[] address) {
     return rpcCli.getAssetIssueByAccount(address);
   }
-
+  public static AssetIssueContract getAssetIssueByName(String assetName){
+    return rpcCli.getAssetIssueByName(assetName);
+  }
 }
