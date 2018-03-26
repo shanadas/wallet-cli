@@ -130,7 +130,7 @@ public class GrpcClient {
 
   public AssetIssueContract getAssetIssueByName(String assetName) {
     ByteString assetNameBs = ByteString.copyFrom(assetName.getBytes());
-    ByteMess request = Account.newBuilder().setAddress(addressBS).build();
+    Account request = Account.newBuilder().setAddress(addressBS).build();
     AssetIssueList assetIssueList = blockingStub
         .getAssetIssueByAccount(request);
     if (assetIssueList != null) {
